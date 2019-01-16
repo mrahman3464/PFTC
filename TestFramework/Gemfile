@@ -1,0 +1,47 @@
+source 'http://rubygems.org'
+
+gem 'cucumber'
+gem 'rspec'
+gem 'selenium-webdriver'
+gem 'watir-webdriver'
+gem "chromedriver-helper"
+gem 'require_all','1.4.0'
+gem 'activesupport', '4.1.8'
+gem 'rake'
+gem 'simplecov'
+gem 'simplecov-rcov'
+#gem 'rautomation'
+
+
+# gem to connect to saucelabs and also dynamically change browser parameters
+gem 'saucelabs'
+
+gem 'rubyXL'
+#gem 'rubyzip'
+gem 'activerecord'
+gem 'nokogiri'
+#gem 'allure-cucumber'
+gem 'headless'
+# gem 'mysql'
+gem 'mysql2'
+gem 'sqlite3'
+gem 'rukuli'
+gem 'java'
+
+gem 'appium_lib'
+gem 'appium_console'
+
+#gem 'cucumber' , '1.3.19'
+
+
+
+#gem 'minitest/autorun'
+#gem 'rest_client'
+gem 'rest-client'
+gem 'json'
+
+
+
+
+
+

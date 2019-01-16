@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>lib/pages/selenium_esay_home_page.rb</title>
+    <link href="./assets/0.2.3/screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./assets/0.2.3/print.css" media="print" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="./assets/0.2.3/rcov.js"></script>
+  </head>
+  <body>
+    <h1>Rubyframework C0 Coverage Information - Simploco - RCov</h1>
+    <h2>lib/pages/selenium_esay_home_page.rb</h2>
+
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left_align"><a href="lib-pages-selenium_esay_home_page_rb.html">lib/pages/selenium_esay_home_page.rb</a></td>
+            <td class='right_align'><tt>79</tt></td>
+            <td class='right_align'><tt>35</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>83.54%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:84px"></div>
+        <div class="uncovered" style="width:16px"></div>
+      </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>62.86%</tt></div>
+      <div class="percent_graph">
+        <div class="covered" style="width:63px"></div>
+        <div class="uncovered" style="width:37px"></div>
+      </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Key</h3>
+
+    <div class="key"><pre><span class='marked'>Code reported as executed by Ruby looks like this...</span><span class='marked1'>and this: this line is also marked as covered.</span><span class='inferred'>Lines considered as run by rcov, but not reported by Ruby, look like this,</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).</span><span class='uncovered'>Finally, here's a line marked as not executed.</span></pre></div>
+
+    <h3>Coverage Details</h3>
+
+    <table class="details">
+      <tbody>
+        <tr class="marked">
+          <td><pre><a name="line2">2</a> class SeleniumEsayHomePage&lt;BasePage</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line3">3</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line4">4</a>   page_url &quot;http://www.seleniumeasy.com/test/&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line5">5</a>  # page_url &quot;http://www.seleniumeasy.com/test/dev&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line6">6</a>   #page_url &quot;http://www.seleniumeasy.com/test/qa-int&quot;</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line7">7</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line8">8</a>   element(:inputFromDropDown){|b|b.link(text:&quot;Input Forms&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line9">9</a>   element(:selectDropDown){|b|b.link(text:&quot;Select Dropdown List&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line10">10</a>   element(:inputForm){|b|b.link(text:&quot;Input Form Submit&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line11">11</a>   element(:ajxForm){|b|b.link(text:&quot;Ajax Form Submit&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line12">12</a>   element(:simpleFormDemo){|b|b.link(xpath:&quot;//*[@id=&#39;navbar-brand-centered&#39;]/ul[1]/li[1]/ul/li[1]/a&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line13">13</a>   element(:datePicker){|b|b.link(text:&quot;Date pickers&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line14">14</a>   element(:bootStrapLink){|b|b.link(href:&quot;./bootstrap-date-picker-demo.html&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line15">15</a>   element(:jQueryDatePicker){|b|b.link(href:&quot;./jquery-date-picker-demo.html&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line16">16</a>   element(:tabledropDown){|b|b.link(text:&quot;Table&quot;)}</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line17">17</a>   element(:paginationLink){|b|b.link(href:&quot;./table-pagination-demo.html&quot;)}</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line18">18</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line19">19</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line20">20</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line21">21</a>   def clickOninputFromDropDown</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line22">22</a>     # @browser.link(text:&quot;Input Forms&quot;).click</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line23">23</a>     sleep 5</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line24">24</a>     inputFromDropDown.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line25">25</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line26">26</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line27">27</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line28">28</a> def clickOnsimpleFormDemo</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line29">29</a>   sleep 5</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line30">30</a>   simpleFormDemo.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line31">31</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line32">32</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line33">33</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line34">34</a> def clickOnSelectDropDown</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line35">35</a>   selectDropDown.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line36">36</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line37">37</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line38">38</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line39">39</a> def clickOnInputForm</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line40">40</a>   inputForm.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line41">41</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line42">42</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line43">43</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line44">44</a> def clickOnAJXForm</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line45">45</a>   ajxForm.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line46">46</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line47">47</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line48">48</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line49">49</a>   def clickonDatePicker</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line50">50</a>     objWait(datePicker)</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line51">51</a>     datePicker.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line52">52</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line53">53</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line54">54</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line55">55</a> def clickOnbootStrap</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line56">56</a>   bootStrapLink.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line57">57</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line58">58</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line59">59</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line60">60</a> def clickOnjQueryDatePicker</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line61">61</a>   jQueryDatePicker.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line62">62</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line63">63</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line64">64</a> def clickOntabledropDown</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line65">65</a>   tabledropDown.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line66">66</a> end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line67">67</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line68">68</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line69">69</a>   def clickOnpaginationLink</pre></td>
+        </tr>
+        <tr class="uncovered">
+          <td><pre><a name="line70">70</a>     paginationLink.when_present.click</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line71">71</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line72">72</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line73">73</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line74">74</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line75">75</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line76">76</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line77">77</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line78">78</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line79">79</a> </pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line80">80</a> end</pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Generated on 2018-07-14 11:33:26 -0400 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+
+  </body>
+</html>

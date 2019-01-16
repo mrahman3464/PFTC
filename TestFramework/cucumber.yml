@@ -1,0 +1,38 @@
+default: --no-source --color BROWSER=chrome  --format pretty  --format html --out results.html --format json --out reports.json
+#-f rerun --out rerun.txt
+
+#default: --no-source --color BROWSER=chrome  --format PrettyFace::Formatter::Html --out index.html
+
+
+
+#default: --no-source --color BROWSER=chrome  --format pretty  --format html --out results.html --format json --out reports.json
+
+
+#default: --no-source --color ARCHIVE_RESULTS=yes BROWSER=chrome  --format pretty --format html --out results.html  --format json --out reports.json
+
+#default: --no-source --color BROWSER=headless  --format pretty  --format html --out results.html --format json --out reports.json
+
+
+####################################
+
+
+#default: --no-source --color ARCHIVE_RESULTS=no Email_Test_Results=NO BROWSER=chrome  --format pretty  --format html --out results.html --format json --out reports.json cucumber -f rerun --out rerun.txt
+
+
+#default: --no-source --color BROWSER=ff --format PrettyFace::Formatter::Html --out index.html --format json --out reports.json
+
+
+#default: --no-source --color BROWSER=chrome --format AllureCucumber::Formatter::Html --out index.html --format json --out reports.json
+
+#default: --no-source --color --format pretty BROWSER=chrome --format html --out report<%= ENV['TEST_ENV_NUMBER'] %>.html
+#chrome: --no-source --color --format pretty BROWSER=chrome
+#firefox:  --no-source --color --format pretty BROWSER=firefox
+#ie:  --no-source --color --format pretty BROWSER=ie
+#
+#qa_chrome: --no-source --color --format pretty BROWSER=chrome SOURCE_URL=http://www.seleniumeasy.com/test/
+#qa_firefox: --no-source --color --format pretty BROWSER=firefox SOURCE_URL=http://www.seleniumeasy.com/test/
+#int_chrome: --no-source --color --format pretty BROWSER=ie SOURCE_URL=https://www.google.com
+#dev_chrome: --no-source --color --format pretty BROWSER=chrome SOURCE_URL=http://www.seleniumeasy.com/test/
+#
+#
+#parallel: --no-source --format progress --format json --out json_expanded_results<%= ENV['TEST_ENV_NUMBER'] %>.json --format ParallelTests::Cucumber::FailuresLogger --out rerun_cucumber<%= ENV['TEST_ENV_NUMBER'] %>.txt
