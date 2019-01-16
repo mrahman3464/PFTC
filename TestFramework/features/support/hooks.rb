@@ -1,47 +1,3 @@
-
-
-
-# Before do
-#
-#   ENV['BROWSER'] ||= "chrome"
-#   ENV['WHERE'] ||= "local"
-#   if(ENV['WHERE']=="remote")
-#     @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://localhost:4444/wd/hub"})
-#   else
-#     # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym)
-#     require 'win32ole'
-#     wmi = WIN32OLE.connect("winmgmts://")
-#     processes = wmi.ExecQuery("select * from win32_process")
-#     ar = processes.each.with_object([]) {|i,a| a << i.name }
-#     @bName = ENV['BROWSER']
-#     case @bName
-#       when 'ff'
-#         if ar.include? "firefox.exe"
-#           system("taskkill /t /f /im firefox.exe")
-#         end
-#         @browser = Watir::Browser.new ENV['BROWSER'].to_sym
-#       when 'ie'
-#         if ar.include? "iexplore.exe"
-#           system("taskkill /t /f /im iexplore.exe")
-#         end
-#         @browser = Watir::Browser.new ENV['BROWSER'].to_sym
-#       when 'chrome'
-#         if ar.include? "chrome.exe"
-#           system("taskkill /t /f /im chrome.exe")
-#         end
-#         @browser = Watir::Browser.new ENV['BROWSER'].to_sym,:switches => %w[--disable-extensions  --ignore-certificate-errors --disable-popup-blocking --disable-translate]
-#       when nil
-#         break
-#     end
-#     # @browser = Watir::Browser.new ENV['BROWSER'].to_sym
-#   end
-#   @browser.window.maximize
-# end
-
-
-
-
-
 Before do
 
 
@@ -49,8 +5,7 @@ Before do
     ENV['WHERE'] ||= "local"
 
     if(ENV['WHERE']=="remote")
-       # user:militim pass:Mihad2016
-      @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://militim:ac90d57e-9e97-4f8f-b1d6-a5cabcb8e096@ondemand.saucelabs.com:80/wd/hub"})
+      @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://user:passkey@ondemand.saucelabs.com:80/wd/hub"})
 
     else
       # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym)
@@ -58,6 +13,13 @@ Before do
       if(ENV['BROWSER']== "chrome")
           Selenium::WebDriver::Chrome.driver_path="/usr/bin/chromedriver"
         @browser = Watir::Browser.new ENV['BROWSER'].to_sym,:switches => %w[--disable-extensions  --ignore-certificate-errors --disable-popup-blocking --disable-translate]
+      
+      if(ENV['BROWSER']== "headless")
+          require 'headless'
+          headless = Headless.new
+          headless.start
+          @browser = Watir::Browser.new ENV['BROWSER'].to_sym
+  
       else
         @browser = Watir::Browser.new ENV['BROWSER'].to_sym
       end
@@ -74,45 +36,6 @@ Before do
 
 
 
-
-# Around do |scenario, block|
-#
-#   if scenario.failed?
-#   $dunit = false
-#   begin
-#     puts "First run"
-#     block.call
-#   rescue
-#     $dunit = true
-#     puts "Second run"
-#     block.call
-#   end
-#     end
-# end
-
-
-
-#   ENV['BROWSER'] = "chrome" if ENV['BROWSER'].nil?
-#   ENV['WHERE'] = "local" if ENV['WHERE'].nil?
-#   if(ENV['WHERE']=="remote")
-#   # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://mrahman1:55a94ff3-c894-4211-a918-67047d2da2ef@localhost:4444/wd/hub"})
-#     @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://sgrahman:363648ef-2b14-4e4d-a137-1cb8792bcb0f@ondemand.saucelabs.com:443/wd/hub"})
-
-#
-#
-#     if (ENV['BROWSER']=="chrome")
-#       @browser = Watir::Browser.new :chrome, :switches => %w[--disable-extensions]
-#     end
-#   else
-#     # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym)
-#     @browser = Watir::Browser.new ENV['BROWSER'].to_sym
-#   end
-#   @browser.window.maximize
-#
-#   # Cucumber::Ast::Scenario = Cucumber::Reports::Legacy::Ast::Scenario
-# end
-
-
 After do |scenario|
   if scenario.failed?
       time = Time.now.strftime("%Y-%m-%d_%H-%M-%S")
@@ -121,49 +44,15 @@ After do |scenario|
     @browser.driver.save_screenshot(screenshot)
     embed screenshot, 'image/png'
   end
-
-  # cookies = @browser.cookies.to_a
-  #
-  # cookies.each do |value|
-  #
-  #   puts "Cookies Info:#{value}"
-  #
-  # end
-
-  #@browser.cookies.clear
-   #@browser.quit
-
-
-  # AllureCucumber.configure do |c|
-  #   c.output_dir = "C:/ELIS2_PageObject_Data_Driven_Framework1/Repots"
-  # end
-
 end
 
 
 
 
-# After do |scenario|
-#
-#    if scenario.failed?
-#    time = Time.now.strftime("%Y-%m-%d_%H-%M-%S")
-#    filename = "error-#{@current_page.class}-#{time}.png"
-#    @current_page.save_screenshot(filename)
-#    embed(filename, 'image/png')
-#    end
-#    @browser.cookies.clear
-#   # @browser.close
-#  end
-#
 
 
 
 
-# if if(ENV['BROWSER']== "headless")
-#      @browser = Watir::Browser.new ENV['BROWSER'].to_sym
-#   require 'headless'
-#   headless = Headless.new
-#   headless.start
 #   at_exit do
 #     headless.destroy
 #   end
@@ -193,6 +82,7 @@ at_exit do
     end
     FileUtils.mv(zipfile_name, "#{test_result}/#{zipfile_name}")
   end
+     headless.destroy
 end
 
 
